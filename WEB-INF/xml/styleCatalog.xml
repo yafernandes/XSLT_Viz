@@ -11,7 +11,7 @@
     <Style name="XSLT_Viz" transform="ReportAjaxMojoVisualizationTransform">
       <ActualParameters>
         <ActualParameter name="documentStyle" value="RWGridJsonStyle"/>
-        <ActualParameter name="reportXMLStyle" value="VisualizationDataStyle"/>
+        <ActualParameter name="reportXMLStyle" value="VisualizationServerJsonDataStyle"/>
         <ActualParameter name="mojoClassName" value="plugins.XSLT_Viz.XSLT_Viz"/>
       </ActualParameters>
       <Layouts>

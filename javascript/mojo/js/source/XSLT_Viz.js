@@ -28,6 +28,8 @@ try {
         return;
     }
 
+    var myself = this;
+
     this.setDefaultPropertyValues(
     {
         data_type: {
@@ -37,8 +39,9 @@ try {
         Log_XML: "false"
     }
     );
-    var myself = this;
 
+    myself.addThresholdMenuItem();
+    
     var di = this.dataInterface;
     var data = di.getRawData(mstrmojo.models.template.DataInterface.ENUM_RAW_DATA_FORMAT.TREE, { hasTitleName: true, hasThreshold: true });
 
@@ -61,6 +64,9 @@ try {
                 metricNode.setAttribute("title", children[i].values[j].name);
                 metricNode.setAttribute("value", children[i].values[j].rv);
                 metricNode.setAttribute("formattedValue", children[i].values[j].v);
+                if (children[i].values[j].threshold) {
+                    metricNode.setAttribute("fillColor", children[i].values[j].threshold.fillColor);
+                }
                 child.appendChild(metricNode);
             }
         }
