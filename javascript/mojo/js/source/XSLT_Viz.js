@@ -40,7 +40,7 @@ try {
     var myself = this;
 
     var di = this.dataInterface;
-    var data = di.getRawData(mstrmojo.models.template.DataInterface.ENUM_RAW_DATA_FORMAT.TREE);
+    var data = di.getRawData(mstrmojo.models.template.DataInterface.ENUM_RAW_DATA_FORMAT.TREE, { hasTitleName: true, hasThreshold: true });
 
     var prop = Object.assign({}, this.getDefaultProperties(), this.getProperties());
 
