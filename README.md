@@ -1,3 +1,3 @@
 # XSLT_Viz
 
-The [sample Dossier](Twitter.mstr) was created using MicroStrategy Desktop 10.10.
+The [example Dossier](Examples.mstr) were created using MicroStrategy Desktop 10.10.
